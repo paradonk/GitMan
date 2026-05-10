@@ -687,7 +687,7 @@ class GitManager:
     def do_push(self):
         def w():
             self._section('Push')
-            r = self._git('git push')
+            r = self._git('git push -u origin HEAD')
             if r.returncode == 0:
                 self._write('✓ Pushed\n', 'ok')
             self._refresh()
@@ -710,7 +710,7 @@ class GitManager:
                 return
             self._write('✓ Committed\n', 'ok')
             self.root.after(0, self._msg.set, '')
-            r3 = self._git('git push')
+            r3 = self._git('git push -u origin HEAD')
             if r3.returncode == 0:
                 self._write('✓ Pushed\n', 'ok')
             self._refresh()
