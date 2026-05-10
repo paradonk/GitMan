@@ -5,6 +5,8 @@ Dark-themed, thread-safe, works with any repository.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Tkinter](https://img.shields.io/badge/UI-Tkinter-green) ![License](https://img.shields.io/badge/license-MIT-gray)
 
+![GitMan Screenshot](GitMan.png)
+
 ---
 
 ## Requirements
@@ -131,6 +133,7 @@ so quotes, apostrophes, and special characters work without escaping.
 ```
 GitMan/
 ├── gitman.py    # Main application
+├── GitMan.png   # Screenshot
 └── README.md    # This file
 ```
 
