@@ -19,13 +19,13 @@ Dark-themed, thread-safe, works with any repository.
 ## Run
 
 ```bash
-python3 ~/Claude/GitMan/gitman.py
+python3 gitman.py
 ```
 
 Or add an alias to `~/.bashrc`:
 
 ```bash
-alias gitman='python3 ~/Claude/GitMan/gitman.py'
+alias gitman='python3 /path/GitMan/gitman.py'
 ```
 
 Then just type `gitman` from anywhere.
