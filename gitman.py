@@ -293,7 +293,7 @@ class GitManager:
                 self._section(f'New Repo: {name}')
                 os.makedirs(path, exist_ok=True)
                 self._write(f'$ git init {path}\n', 'cmd')
-                r = subprocess.run(['git', 'init', path],
+                r = subprocess.run(['git', 'init', '-b', 'main', path],
                                    capture_output=True, text=True)
                 self._write(r.stdout or r.stderr)
                 if r.returncode != 0:
@@ -474,7 +474,7 @@ class GitManager:
                 dlg.destroy()
                 def w():
                     self._section('Init')
-                    r = subprocess.run(['git', 'init', path],
+                    r = subprocess.run(['git', 'init', '-b', 'main', path],
                                        capture_output=True, text=True)
                     self._write(r.stdout or r.stderr)
                     if r.returncode == 0:
